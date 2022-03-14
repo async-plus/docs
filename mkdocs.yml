@@ -4,7 +4,7 @@ site_description: Async+ documentation (web framework for Swift).
 
 repo_name: Async+ GitHub
 repo_url: http://github.com/async-plus/async-plus
-edit_uri: https://github.com/async-plus/async-plus/edit/main/Documentation
+edit_uri: https://github.com/async-plus/docs/edit/main/docs
 
 copyright: "Copyright &copy; Async+"
 
