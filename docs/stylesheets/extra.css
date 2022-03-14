@@ -1,8 +1,8 @@
 :root {
-  --md-typeset-a-color:         #3900A0;
+  --md-typeset-a-color:         #878787;
 }
 :root > * {
-  --md-typeset-a-color:         #3900A0;
+  --md-typeset-a-color:         #878787;
   --md-code-hl-keyword-color:   #ab47bd;
 
   --md-code-hl-number-color: #1C00CF;
