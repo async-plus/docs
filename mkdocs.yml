@@ -1,0 +1,63 @@
+site_name: Async+ Docs
+site_url: https://docs.asyncplus.codes/
+site_description: Async+ documentation (web framework for Swift).
+
+repo_name: Async+ GitHub
+repo_url: http://github.com/async-plus/async-plus
+edit_uri: https://github.com/async-plus/async-plus/edit/main/Documentation
+
+copyright: "Copyright &copy; Async+"
+
+theme:
+  name: material
+  language: en
+  custom_dir: theme/
+  palette:
+    primary: black
+    accent: purple  
+  favicon: assets/favicon.png
+  logo: assets/docs-logo.png
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+
+  analytics:
+    provider: google
+    property: UA-221751024-1
+
+  font:
+    text: Roboto Slab
+    code: Source Code Pro
+
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/async_plus
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/vaAhGvvHpW
+    - icon: fontawesome/brands/github
+      link: https://github.com/async-plus
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+
+nav:
+- Welcome: "index.md"
+- Getting Started: "getting-started.md"
+- Operations: "operations.md"
+- Using chains from async or throwing contexts: "async-or-throwing-contexts.md"
+- Motivation and common patterns: "motivation-and-common-patterns.md"
+- Cancellation: "cancellation.md"
+- Migrating from PromiseKit: "migrating-from-promisekit.md"
+- Frequently asked questions (FAQ): "faq.md"
+
