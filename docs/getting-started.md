@@ -52,7 +52,7 @@ To play around with the API you may find it useful to use the convenience `after
 
 ```swift
 attempt {
-    after(2.0)
+    await after(2.0)
     return "Hello "
 }.then {
     hello in 
