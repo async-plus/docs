@@ -3,7 +3,7 @@
 Following is a full list of supported chaining operations in Async+:
 
 ## attempt
-Use `attempt` to start a chain of commands. The provided body will begin running immediately. The return type will be a `Value`, `Result` (`AsyncPlus.Result`), `Guarantee`, or `Promise` depending on the async/throwing status of the body closure.
+Use `attempt` to start a chain of commands. The provided body will begin running immediately. The return type will be a `Value<T>`, `Result<T>` (`AsyncPlus.Result`), `Guarantee<T>`, or `Promise<T>` depending on the async/throwing status of the body closure.  If the body passed to attempt does not return a value, you will get a `Value<()>`, `AsyncPlus.Result<()>`, `Guarantee<()>`, or `Promise<()>` as a return type.  You usually do not work with these return types directly, but instead use chaining operations on them.
 
 ```swift
 attempt {
@@ -12,7 +12,7 @@ attempt {
 ```
 
 ## then
-`then` takes a body closure to run that takes as input any results from earlier in the chain, and returns a value to pass along to later operations in the chain. The body closure can be async and/or throwing. If the closure does not return a value, any existing values from earlier in the chain are passed on automatically.
+`then` takes a body closure to run that takes as input any results from earlier in the chain, and returns a value to pass along to later operations in the chain. The body closure can be async and/or throwing. If the closure does not return a value, any existing value from earlier in the chain are passed on automatically.
 
 ```swift
 .then {
@@ -30,6 +30,8 @@ or
     return <instance of OutType>
 }
 ```
+
+If you do not return a result from the closure, the result of the chaining operation is discardable, meaning that you will not get an unused value warning from Xcode if you choose to terminate the chain there. The return types are the same as `attempt`, based on the async/throwing status of the previous items in the chain, and the async/throwing status of the provided body. Again, you usually do not need to worry about the return type.
 
 ## recover
 The provided closure to recover recieves any errors, and can attempt to provide a "backup" or "recovery" value to fix the error. The provided closure may be async and/or throwing.
@@ -72,6 +74,7 @@ Always runs the provided body in place with respect to the other chained operati
     <non-throwing body>
 }
 ```
+Once you call `.catch` on a chain, you can continue to chain on other calls to `.catch`, `.ensure`, but you will no longer be able to call `.then` or `.recover` on the chain to continue building its return value.  If you wish to be able to do this, use `.recover` instead of `.catch`.
 
 ## finally
 `finally` may be run after a chain fully completes. The provided body closure may be async, but not throwing. `finally` will not be available for chains that have not fully caught any failures, or have not used results returned from the last `then` call.  Once finally has been called, no more chained operations with body closures may follow.
