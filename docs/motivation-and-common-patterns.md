@@ -113,7 +113,7 @@ let resultInt: Int = try await attempt {
             return self.catch {
                 error in
                 print(error.localizedDescription)
-    	    throw error
+                throw error
             }
         }
     }
