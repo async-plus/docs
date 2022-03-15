@@ -10,7 +10,7 @@ Async+ for Swift provides a simple chainable interface for your async and throwi
 
 [Operations](operations.md)
 
-[Using chains from async or throwing contexts](async-or-throwing-contexts.md)
+[Async/Throwing Interoperability](async-or-throwing-contexts.md)
 
 [Motivation and common patterns](motivation-and-common-patterns.md)
 
@@ -18,7 +18,7 @@ Async+ for Swift provides a simple chainable interface for your async and throwi
 
 [Migrating from PromiseKit](migrating-from-promisekit.md)
 
-[Frequently asked questions (FAQ)](faq.md)
+[FAQ](faq.md)
 
 
 
