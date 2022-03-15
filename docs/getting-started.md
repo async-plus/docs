@@ -2,23 +2,23 @@
 
 ## Installation
 
-Async+ must be installed using SwiftPM at the moment.
+Async+ is installed using SwiftPM.
 
 **With Xcode (SwiftPM)** 
 
-Install the Async+ package in Xcode by going to `<your project> -> <ProjectName> -> Package Dependencies -> "+"` and entering: `https://github.com/async-plus/async-plus.git` in the search bar in the top right corner of the window.
+Install the Async+ package in Xcode by going to **`<your project> -> <ProjectName> -> Package Dependencies -> "+"`** and entering: `https://github.com/async-plus/async-plus.git` in the search bar in the top right corner of the window.
 
 **With Package.swift**
 
-If you are developing a Swift package or a Linux-based Swift application you will have a `Package.swift` file. Modify it to match the pattern below, updating the major and minor version numbers to the latest version of Async+ (which you can find [here](https://github.com/async-plus/async-plus/tags)):
+If you are developing a Swift package or a Linux-based Swift application you will have a `Package.swift` file. Modify it to match the pattern below, updating the major and minor version numbers to the latest version of Async+ (which you can find [here](https://github.com/async-plus/async-plus/releases)):
 
 ```swift
 dependencies: [
-    .Package(url: "https://github.com/async-plus/async-plus.git", majorVersion: 0, minor: 1),
+    .Package(url: "https://github.com/async-plus/async-plus.git", majorVersion: 1, minor: 0),
 ] 
 ```
 
-The above example uses version 0.1.
+The above example uses version 1.0.
 
 **Importing Async+**
 
@@ -29,7 +29,6 @@ To use Async+ you must import it with `import AsyncPlus` .
 Basic chaining operations are:
 
 * `.then` arranges blocks one after another, passing along any values
-
 * `.recover` recovers from a thrown error with a backup value (or block to run)
 * `.catch` catches any errors (and allows you to throw new ones for later catch blocks)
 * `attempt { ... }` kicks off a chain as in the example below:
