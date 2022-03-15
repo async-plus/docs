@@ -1,0 +1,19 @@
+:root {
+  --md-typeset-a-color:         #878787;
+}
+:root > * {
+  --md-typeset-a-color:         #878787;
+  --md-code-hl-keyword-color:   #ab47bd;
+
+  --md-code-hl-number-color: #1C00CF;
+  --md-code-hl-function-color: #326D74;
+  --md-code-hl-constant-color: #326D74;
+  --md-code-hl-string-color:  #C41A16;
+/*  --md-code-hl-name-color: #000;
+  --md-code-hl-operator-color: #000;
+  --md-code-hl-punctuation-color: #000;*/
+  --md-code-hl-comment-color: #5D6C79;
+  --md-code-hl-generic-color:  #326D74;
+  /*--md-code-hl-variable-color:  #000;*/
+
+}
