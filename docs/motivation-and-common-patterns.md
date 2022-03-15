@@ -26,7 +26,7 @@ attempt {
 For comparison, if we tried to write the above flow without Async+ we'd get something like this:
 
 
-  ```swift
+```swift
 Task.init {
     do {
         let thing: Thing
@@ -41,7 +41,7 @@ Task.init {
         alert(error)
     }
 }
-  ```
+```
 
 Async+ allows async and/or throwing code to remain unnested, modular, and concise. 
 
