@@ -22,7 +22,7 @@ The above example uses version 1.1.
 
 **With CocoaPods**
 
-For **CocoaPods**, in your [Podfile](https://guides.cocoapods.org/syntax/podfile.html), add the "AsyncPlus" pod and version number to a target as in the following example:
+For CocoaPods, in your [Podfile](https://guides.cocoapods.org/syntax/podfile.html), add the "AsyncPlus" pod and version number to a target as in the following example:
 
 ```
 target "Change Me!" do
